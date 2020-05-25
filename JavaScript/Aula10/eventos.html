@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt Arial;
+            background: rgb(137, 137, 221);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#teste{
+            margin-top: -200px;
+            margin-left: 250px;
+            font: normal 15pt Arial;
+            background: rgb(51, 51, 94);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        <!--Como foi adicionado os enventos listening a linha que ficaria na div pode ser retirada: div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"-->
+        Interagindo.
+    </div>
+    <div id="teste">
+        Testando box.
+    </div>
+    <script>
+        var a = window.document.getElementById('area');
+        
+        //eventos de escuta
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'blue'
+        }
+
+        function entrar(){
+            a.innerText = "Clica vai"
+        }
+
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>
