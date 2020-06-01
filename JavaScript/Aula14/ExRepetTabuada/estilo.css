@@ -25,6 +25,16 @@ div{
     padding: 10px;
 }
 
+div#tabu{
+    background: rgb(101, 166, 204);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    margin-left: 130px;
+    text-align: center;
+}
+
 input[type = "number"]{
     width: 80px;
 }
